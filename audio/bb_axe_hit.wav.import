@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bb_axe_hit.wav-0eeb75aeeec819a14e53a0c5d12dd039.sample"
+
+[deps]
+
+source_file="res://audio/bb_axe_hit.wav"
+dest_files=[ "res://.import/bb_axe_hit.wav-0eeb75aeeec819a14e53a0c5d12dd039.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

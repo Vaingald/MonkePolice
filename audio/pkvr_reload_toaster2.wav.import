@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pkvr_reload_toaster2.wav-8503d4be341f5f7cc6ad1e6f17dad84c.sample"
+
+[deps]
+
+source_file="res://audio/pkvr_reload_toaster2.wav"
+dest_files=[ "res://.import/pkvr_reload_toaster2.wav-8503d4be341f5f7cc6ad1e6f17dad84c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://models/tao_kaarilapart1.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://themes/tsumetenamitsu.tres" type="Theme" id=2]
+[ext_resource path="res://scripts/mainmenu.gd" type="Script" id=3]
+[ext_resource path="res://scripts/ModManager.gd" type="Script" id=4]
+[ext_resource path="res://additional_shaders/vhs_shader.shader" type="Shader" id=5]
+
+[sub_resource type="ProceduralSky" id=1]
+sky_top_color = Color( 0.168627, 0.392157, 0.815686, 1 )
+sky_horizon_color = Color( 0.054902, 0.803922, 0.952941, 1 )
+ground_bottom_color = Color( 0, 0, 0, 1 )
+ground_horizon_color = Color( 0, 0, 0, 1 )
+sun_latitude = -180.0
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 5 )
+
+[sub_resource type="OpenSimplexNoise" id=4]
+seed = -550
+octaves = 9
+period = 48.4
+persistence = 1.0
+lacunarity = 4.0
+
+[sub_resource type="NoiseTexture" id=5]
+width = 64
+height = 64
+noise = SubResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -768.0
+margin_bottom = -450.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 102.632
+margin_top = 45.6393
+margin_right = 150.632
+margin_bottom = 65.6393
+theme = ExtResource( 2 )
+text = "play"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 63.794
+margin_top = 86.8602
+margin_right = 195.794
+margin_bottom = 106.86
+theme = ExtResource( 2 )
+text = "mods and resourcepacks"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+margin_left = 85.2989
+margin_top = 35.3441
+margin_right = 213.299
+margin_bottom = 131.344
+theme = ExtResource( 2 )
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="WindowDialog"]
+margin_left = 41.4418
+margin_top = 17.2244
+margin_right = 86.4418
+margin_bottom = 32.2244
+theme = ExtResource( 2 )
+text = "file name:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="WindowDialog"]
+margin_left = 44.8572
+margin_top = 70.6793
+margin_right = 84.8572
+margin_bottom = 87.6793
+theme = ExtResource( 2 )
+text = "load"
+
+[node name="LineEdit" type="LineEdit" parent="WindowDialog"]
+margin_left = 6.00647
+margin_top = 38.1706
+margin_right = 124.006
+margin_bottom = 63.1706
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Spatial"]
+environment = SubResource( 2 )
+
+[node name="tao_kaarilapart1" type="MeshInstance" parent="Spatial/WorldEnvironment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.396392, 0.00959074, -5.95958 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="Camera" type="Camera" parent="Spatial"]
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.447546, 0.954987, -0.328187 )
+
+[node name="shader_overlay" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 18.4712, 35.7474 )
+scale = Vector2( 22.64, 14.4728 )
+texture = SubResource( 5 )
+[connection signal="pressed" from="Button3" to="Button2" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]

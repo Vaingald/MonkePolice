@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://audio/tao_sleepsong.wav" type="AudioStream" id=2]
+[ext_resource path="res://additional_shaders/vhs_shader.shader" type="Shader" id=3]
+[ext_resource path="res://scripts/typewriter.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 3 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 1
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 256.0
+margin_bottom = 150.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_top = 60.6537
+margin_right = 259.0
+margin_bottom = 75.6537
+custom_fonts/font = SubResource( 1 )
+text = "ZZZZZZzzzzz..."
+align = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+speed = 0.7
+changesceneto = "res://maps/map_cutscene1.tscn"
+scrollspeed = 0.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = SubResource( 3 )
+margin_left = -1182.94
+margin_top = -563.08
+margin_right = -1142.94
+margin_bottom = -523.08
+rect_scale = Vector2( 106.41, 48.1767 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/anvl_aku83_lowpoly.obj-4d1afe2aa27a98fe34db5be816f9e0d3.mesh"
+
+[deps]
+
+files=[ "res://.import/anvl_aku83_lowpoly.obj-4d1afe2aa27a98fe34db5be816f9e0d3.mesh" ]
+
+source_file="res://models/anvl_aku83_lowpoly.obj"
+dest_files=[ "res://.import/anvl_aku83_lowpoly.obj-4d1afe2aa27a98fe34db5be816f9e0d3.mesh", "res://.import/anvl_aku83_lowpoly.obj-4d1afe2aa27a98fe34db5be816f9e0d3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

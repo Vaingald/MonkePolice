@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pkvr_riffle_aku4_va1.wav-71742bd1841382fd8dbd344d935b295b.sample"
+
+[deps]
+
+source_file="res://audio/pkvr_riffle_aku4_va1.wav"
+dest_files=[ "res://.import/pkvr_riffle_aku4_va1.wav-71742bd1841382fd8dbd344d935b295b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/anvl_plane100uv.obj-483ebf6e4fe53576f8aacd0a450ef7e5.mesh"
+
+[deps]
+
+files=[ "res://.import/anvl_plane100uv.obj-483ebf6e4fe53576f8aacd0a450ef7e5.mesh" ]
+
+source_file="res://models/anvl_plane100uv.obj"
+dest_files=[ "res://.import/anvl_plane100uv.obj-483ebf6e4fe53576f8aacd0a450ef7e5.mesh", "res://.import/anvl_plane100uv.obj-483ebf6e4fe53576f8aacd0a450ef7e5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

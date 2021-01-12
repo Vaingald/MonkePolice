@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/monke_npc_answer_no.wav-3860315e8719031b87ea4d87a5869c76.sample"
+
+[deps]
+
+source_file="res://audio/monke_npc_answer_no.wav"
+dest_files=[ "res://.import/monke_npc_answer_no.wav-3860315e8719031b87ea4d87a5869c76.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
